@@ -1,0 +1,186 @@
+Name: [Your Full Name]
+Matric Number: [Your Matric Number]
+Machine Learning Algorithm Used: Random Forest Classifier
+Model Persistence Method Used: Joblib
+
+Live URL of Hosted Application: [To be updated after deployment]
+GitHub Repository Link: [To be updated after pushing to GitHub]
+
+================================================================================
+DEPLOYMENT INSTRUCTIONS
+================================================================================
+
+This application can be deployed on the following platforms:
+
+1. RENDER.COM (Recommended)
+   - Create account at https://render.com
+   - Connect GitHub repository
+   - Create new Web Service
+   - Set build command: pip install -r requirements.txt
+   - Set start command: gunicorn app:app
+   - Deploy!
+   - URL format: https://your-app-name.onrender.com
+
+2. PYTHONANYWHERE.COM
+   - Create account at https://www.pythonanywhere.com
+   - Upload files via Files tab
+   - Configure web app in Web tab
+   - Set WSGI configuration file
+   - Reload web app
+   - URL format: https://yourusername.pythonanywhere.com
+
+3. STREAMLIT CLOUD (If using Streamlit)
+   - Create account at https://streamlit.io/cloud
+   - Connect GitHub repository
+   - Deploy directly from GitHub
+   - URL format: https://your-app-name.streamlit.app
+
+4. VERCEL (With additional configuration)
+   - Create account at https://vercel.com
+   - Install Vercel CLI: npm i -g vercel
+   - Run: vercel
+   - Follow prompts
+   - URL format: https://your-app-name.vercel.app
+
+5. SCORAC.COM
+   - Upload project as per instructions
+   - Follow platform-specific deployment steps
+
+================================================================================
+FEATURES USED IN THE MODEL
+================================================================================
+
+1. Pclass (Passenger Class) - Categorical: 1st, 2nd, 3rd class
+2. Sex (Gender) - Categorical: Male, Female
+3. Age (Age in years) - Numerical: 0-120
+4. Fare (Ticket price) - Numerical: British Pounds
+5. Embarked (Port of Embarkation) - Categorical: C, Q, S
+
+Target Variable: Survived (0 = Did Not Survive, 1 = Survived)
+
+================================================================================
+MODEL PERFORMANCE METRICS
+================================================================================
+
+Algorithm: Random Forest Classifier
+Number of Trees: 200
+Training Accuracy: ~84-86%
+Testing Accuracy: ~82-84%
+Cross-Validation Accuracy: ~82-84%
+ROC-AUC Score: ~0.85-0.88
+
+Note: Exact metrics will be available after running the notebook
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+Titanic_Project_yourName_matricNo/
+├── app.py                          # Flask web application
+├── requirements.txt                # Python dependencies
+├── Titanic_hosted_webGUI_link.txt  # This file
+├── README.md                       # Project documentation
+├── model/
+│   ├── model_building.ipynb        # Jupyter notebook for model training
+│   └── titanic_survival_model.pkl  # Trained model (after running notebook)
+├── static/
+│   └── style.css                   # CSS styling
+├── templates/
+│   └── index.html                  # HTML template
+└── tests/
+    └── test_app.py                 # Unit tests (optional)
+
+================================================================================
+SETUP INSTRUCTIONS
+================================================================================
+
+1. Download the Titanic dataset:
+   - Visit: https://www.kaggle.com/c/titanic/data
+   - Download: train.csv
+   - Place in project root directory
+
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Train the model:
+   - Open model/model_building.ipynb in Jupyter
+   - Run all cells
+   - This will create titanic_survival_model.pkl
+
+4. Run the web application:
+   python app.py
+
+5. Access the application:
+   http://localhost:5000
+
+================================================================================
+DEPLOYMENT CHECKLIST
+================================================================================
+
+Before deploying, ensure:
+☐ Model has been trained (titanic_survival_model.pkl exists)
+☐ All dependencies are in requirements.txt
+☐ GitHub repository is created and pushed
+☐ Deployment platform account is created
+☐ Environment variables are set (if needed)
+☐ Application runs locally without errors
+☐ All files follow the required structure
+
+================================================================================
+TESTING THE APPLICATION
+================================================================================
+
+Sample Test Cases:
+
+1. Rich Young Woman (1st Class)
+   - Pclass: 1, Sex: Female, Age: 25, Fare: 100, Embarked: C
+   - Expected: Survived (High probability)
+
+2. Poor Old Man (3rd Class)
+   - Pclass: 3, Sex: Male, Age: 60, Fare: 8, Embarked: S
+   - Expected: Did Not Survive (High probability)
+
+3. Middle-aged Woman (2nd Class)
+   - Pclass: 2, Sex: Female, Age: 35, Fare: 30, Embarked: Q
+   - Expected: Survived (Medium-High probability)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Common Issues and Solutions:
+
+1. Model file not found
+   → Ensure model_building.ipynb has been run completely
+   → Check that titanic_survival_model.pkl exists in model/ folder
+
+2. Import errors
+   → Run: pip install -r requirements.txt
+   → Ensure Python version is 3.8 or higher
+
+3. Port already in use
+   → Change port in app.py: app.run(port=5001)
+   → Or kill the process using the port
+
+4. Dataset not found
+   → Download train.csv from Kaggle
+   → Place in project root directory
+
+5. Deployment fails
+   → Check deployment platform logs
+   → Ensure all files are committed to GitHub
+   → Verify requirements.txt is complete
+
+================================================================================
+CONTACT & SUBMISSION
+================================================================================
+
+Course: COS331 - Artificial Intelligence
+Institution: Covenant University
+Academic Session: 2025/2026
+Submission Deadline: February 5, 2026, 11:59 PM
+Platform: Scorac.com
+
+For questions or issues, contact your course instructor.
+
+================================================================================
