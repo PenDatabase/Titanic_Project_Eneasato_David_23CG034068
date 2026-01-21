@@ -3,8 +3,8 @@ Titanic Survival Prediction Web Application
 ============================================
 Flask-based web application for predicting Titanic passenger survival.
 
-Author: [Your Name]
-Matric No: [Your Matric Number]
+Author: Eneasato David Chibueze
+Matric No: 23CG034068
 Algorithm: Random Forest Classifier
 Model Persistence: Joblib
 """

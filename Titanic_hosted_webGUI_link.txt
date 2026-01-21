@@ -1,10 +1,10 @@
-Name: [Your Full Name]
-Matric Number: [Your Matric Number]
+Name: Eneasato David Chibueze
+Matric Number: 23CG034068
 Machine Learning Algorithm Used: Random Forest Classifier
 Model Persistence Method Used: Joblib
 
-Live URL of Hosted Application: [To be updated after deployment]
-GitHub Repository Link: [To be updated after pushing to GitHub]
+Live URL of Hosted Application: https://titanic-project-eneasato-david-23cg034068.onrender.com
+GitHub Repository Link: https://github.com/PenDatabase/Titanic_Project_Eneasato_David_23CG034068.git
 
 ================================================================================
 DEPLOYMENT INSTRUCTIONS
